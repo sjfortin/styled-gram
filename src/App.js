@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
-const mainColor = 'indianred'
+const mainColor = 'slategray';
 
 const Title = styled.h1`
-  color: ${props => props.color ||  'goldenrod'};
+  color: ${props => props.color || 'slategrey'};
   font-size: 2.8em;
   margin: 25px;
   padding-bottom: 20px;
@@ -22,34 +22,39 @@ const border = css`
     if (props.showBorder) {
       return `
         border: 1px solid ${mainColor};
-        border-radius: 8px;
+        border-radius: 4px;
       `;
     }
-  }}
+  }};
+`;
+
+const ThumbnailWrapper = styled.div`
+  flex-basis: 50%;
 `;
 
 const Thumbnail = styled.img`
-  flex-grow: 1;
-  width: 300px;
-  height: 250px;
   padding: 5px;
+  align-self: center;
+  width: 90%;
   margin: 15px;
-  ${border}
+  filter: grayscale(90%);
+  ${border};
 `;
 
 class App extends Component {
   render() {
-    const thumbnails = Array.from({ length: 5 }, (_, index) => {
-      const showBorder = index % 2 === 0;
-      return <Thumbnail key={index + 1} src={require(`../assets/thumbnail-${index + 1}.jpeg`)} showBorder={showBorder} />;
+    const thumbnails = Array.from({ length: 4 }, (_, index) => {
+      return (
+        <ThumbnailWrapper>
+          <Thumbnail key={index + 1} src={require(`../assets/thumb${index + 1}.jpg`)} showBorder />
+        </ThumbnailWrapper>
+      );
     });
 
     return (
       <div className={this.props.className}>
-        <Title color={mainColor}>Mystagram</Title>
-        <Gallery>
-          {thumbnails}
-        </Gallery>
+        <Title color={mainColor}>styled-gram</Title>
+        <Gallery>{thumbnails}</Gallery>
       </div>
     );
   }
@@ -60,4 +65,3 @@ export default styled(App)`
   height: 100vh;
   text-align: center;
 `;
-
