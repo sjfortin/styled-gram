@@ -1,29 +1,6 @@
-# 💅 Styled-Components in Action
-> Comprehensive tutorial that walk you through the main concepts of [styled-components](https://github.com/styled-components/styled-components)
+# 💅 styled-gram
 
-<div align="center">
-  <br>
-	<img width="700" src="https://cdn-images-1.medium.com/max/1600/1*DRKBiRWYV4ND1qy35x80cw.png">
-</div>
+Styled comp learning. Deployed to [http://5aefd6943672df689387337a.vigilant-ramanujan-a5d053.netlify.com](http://5aefd6943672df689387337a.vigilant-ramanujan-a5d053.netlify.com)
 
-## Install
-
-Clone the repository to your local directory
-
-```
-$ git clone https://github.com/lvarayut/styled-components-tutorial
-$ cd styled-components-tutorial
-```
-
-Install all dependencies & Start developing
-
-```bash
-$ yarn install
-$ yarn start
-```
-
-> If you want to start from scratch, please check out the [scratch branch](https://github.com/lvarayut/styled-components-tutorial/tree/scratch) instead.
-
-## License
-
-MIT © [Varayut Lerdkanlayanawat](https://github.com/lvarayut)
+##Souce
+https://github.com/lvarayut/styled-components-tutorial
